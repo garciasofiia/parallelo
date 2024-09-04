@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallo Arquitetura</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo-white.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home"><span class="number">01.</span> Home</a></li>
+                <li><a href="#trabalhos"><span class="number">02.</span> Trabalhos</a></li>
+                <li><a href="#scaneamento"><span class="number">03.</span> Scaneamento</a></li>
+                <li><a href="#sobre"><span class="number">04.</span> Sobre</a></li>
+                <li><a href="#lancamentos"><span class="number">05.</span> Lançamentos</a></li>
+                <li><a href="#contato"><span class="number">06.</span> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <main>
+        <div class="carousel">
+            <img src="imagens\eliporto.jpg" alt="Imagem 1" class="active">
+            <img src="imagens\galpao.jpg" alt="Imagem 2">
+            <img src="imagens\casa.jpg" alt="Imagem 3">
+            <div class="text-overlay">Texto sobre a imagem</div>
+        </div>
+    </main>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const textOverlay = document.querySelector('.text-overlay');
+        const texts = [
+            "Eliporto",
+            "Galpao",
+            "Texto sobre a Imagem 3"
+        ];
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+            textOverlay.textContent = texts[currentIndex];
+        }
+
+        setInterval(showNextImage, 5000); // Muda a imagem a cada 3 segundos
+    </script>
+</body>
+</html>
+
+        
