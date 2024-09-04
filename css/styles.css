@@ -1,24 +1,32 @@
 body {
     margin: 0;
-    background-color: #fff; /* Fundo branco para o restante da página */
+    background-image: url(../imagens/eliporto.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
 }
 
 header {
-    background-color: #000; /* Fundo preto */
+    background-color: #000;
     color: #fff;
     display: flex;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; /* Centraliza o conteúdo verticalmente */
     padding: 20px 40px; /* Aumenta o espaçamento interno do cabeçalho */
     position: fixed;
-    width: calc(100% - 80px); /* Espaçamento lateral (40px de cada lado) */
     top: 20px; /* Espaçamento do topo */
     left: 40px; /* Espaçamento lateral do lado esquerdo */
     right: 40px; /* Espaçamento lateral do lado direito */
     z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
-    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
-    height: 150px; /* Aumenta a altura do cabeçalho */
+   
 }
+
+.container {
+    text-align: center;
+    margin-top: 200px;
+}
+
 
 .logo {
     display: flex;
@@ -34,7 +42,7 @@ header {
 nav {
     display: flex;
     align-items: center; /* Alinha verticalmente os itens de navegação */
-    flex-grow: 1; /* Faz com que o nav ocupe o espaço restante */
+    flex-grow: 1; 
     justify-content: center; /* Centraliza horizontalmente os itens de navegação */
 }
 
@@ -59,55 +67,27 @@ nav ul li a {
     padding: 10px 15px; /* Adiciona espaçamento interno para melhorar a usabilidade */
    font-size: 16px;
    font-family: Montserrat, sans-serif;
+   transition: 1s ;
 }
 
 nav ul li a:hover {
-    color: #FFD700; /* Muda a cor para amarelo dourado ao passar o mouse */
+    color: #e7a920; /* Muda a cor para amarelo dourado ao passar o mouse */
     text-decoration-line: none;
+    transition: 1s;
     text-decoration-style: solid;  
     text-decoration-thickness: auto;
     text-decoration:line-through;
 }
 
 nav ul li span.number {
-    color: #a1a1a1; /* Cor cinza para o número */
+    color: #686868; /* Cor cinza para o número */
     font-size: 0.8em; /* Tamanho menor para o número */
     font-family: 'Arial', sans-serif; /* Fonte diferente (pode ser alterada conforme necessário) */
-    margin-right: 5px; /* Espaço entre o número e o texto */
+    margin-right: 7px; /* Espaço entre o número e o texto */
 }
 
 main {
     margin-top: 180px; /* Ajusta o espaço entre o topo e o conteúdo principal para a nova altura do cabeçalho */
     text-align: center;
-}
-
-.carousel {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-    display: none; /* Esconde todas as imagens inicialmente */
-}
-
-.carousel img.active {
-    display: block; /* Mostra apenas a imagem ativa */
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    padding: 10px;
-    font-size: 24px;
-    text-align: center;
-    width: 80%; /* Ajusta a largura do texto */
 }
 
