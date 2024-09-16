@@ -104,10 +104,25 @@ section{
     width: 100%;
     height: 500px;
     
-
-
 }
 
+.trabalhos .mosaico{
+    min-width: 1200px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+.trabalhos .mosaico .item{
+    height: 470px; /*altura*/
+    width: 570px; /*largura*/
+    background-image: url(../imagens/eliporto.jpg);
+    background-size: cover; /*tamanho da imagem de fundo*/
+    background-position: center; /*posiçao da imagem, nesse caso no centro*/
+}
+#trabalhos{
+    background-color: blue;   } 
+
+/*------------------fim do trabalhos----------*/
 
 .icons{
  height: 120px;
